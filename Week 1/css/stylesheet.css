@@ -1,0 +1,99 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+header
+{
+    width: 60%;
+    margin: 1% auto 0;
+    
+}
+
+h1
+{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+}
+
+.persoon
+{
+	width: 130px;
+    height: 400px;
+    float: left;
+    margin-left: 1%;
+    margin-top: 5%;
+}
+
+#test {
+width: 80%;
+margin: 0 auto 0;
+}
+
+.naam
+{
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+.MB
+{
+    text-align: center;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+.locatie
+{
+    text-align: center;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+.geslachtm
+{
+    width: 32px;
+    height: 32px;
+    margin: 0 auto 0;
+    background-image: url(../sex_male.png);
+    background-size: cover;    
+}
+
+.geslachtv
+{
+ width: 32px;
+    height: 32px;
+    margin: 0 auto 0;
+    background-image: url(../sex_female.png);
+    background-size: cover; 
+}
+
+.staaf
+{
+    width: 20%;
+    height: 250px;
+    margin: 0 auto 0;
+    background-color: aliceblue;
+    position: relative;
+}
+
+.percentage
+{
+     text-align: center;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    margin-top: 1%;
+}
+
+.fill
+{
+    bottom: 0px;
+    background-color: black;
+    height: 50%;
+    width: 100%;
+    position: absolute;
+}

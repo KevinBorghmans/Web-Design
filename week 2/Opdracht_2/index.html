@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+      <script type="text/javascript">
+       
+
+      google.load("visualization", "1", {packages:["corechart"]});
+      $(function(){
+        $.getJSON('dataverkeer.json', function(data){
+//       
+					var dataTable = new google.visualization.DataTable();
+					dataTable.addColumn('string', 'Land');
+                    dataTable.addColumn('number', 'Jaar_2011');
+					// Aantal rijen toevoegen op basis van de JSON inhoud
+					dataTable.addRows(data.length);
+					
+					// DataTable vullen, itereren over elke rij
+					$.each(data, function(i, object) {
+						// De waardes toewijzen aan de respectievelijke kolommen per rij
+						dataTable.setValue(i, 0, object.Land)
+                        dataTable.setValue(i, 1, object.Jaar_2011);
+					});
+
+        var options = {
+          title: 'Data use',
+          legend: 'none',
+          pieSliceText: 'label',
+          slices: {  0: {offset: 0.2},
+                    4: {offset: 0.3},
+                    7: {offset: 0.4},
+                    10: {offset: 0.5},
+          },
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(dataTable, options);
+      });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

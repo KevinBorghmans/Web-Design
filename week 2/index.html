@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Google </title>
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			// Visualisatie API laden
+			google.load('visualization', '1.0', {
+				'packages' : ['corechart']
+			});
+
+			$(function() {
+				// Als het bestand geladen is, laad het JSON bestand in, daarna callback uitvoeren
+				$.getJSON('dataverkeer.json', function(data) {
+
+					// De DataTable vullen met JSON data
+					var dataTable = new google.visualization.DataTable();
+					dataTable.addColumn('string', 'Land');
+					dataTable.addColumn('number', 'Jaar_1999');
+                    dataTable.addColumn('number', 'Jaar_2000');
+                    dataTable.addColumn('number', 'Jaar_2001');
+                    dataTable.addColumn('number', 'Jaar_2002');
+                    dataTable.addColumn('number', 'Jaar_2003');
+                    dataTable.addColumn('number', 'Jaar_2004');
+                    dataTable.addColumn('number', 'Jaar_2005');
+                    dataTable.addColumn('number', 'Jaar_2006');
+                    dataTable.addColumn('number', 'Jaar_2007');
+                    dataTable.addColumn('number', 'Jaar_2008');
+                    dataTable.addColumn('number', 'Jaar_2009');
+                    dataTable.addColumn('number', 'Jaar_2010');
+                    dataTable.addColumn('number', 'Jaar_2011');
+					// Aantal rijen toevoegen op basis van de JSON inhoud
+					dataTable.addRows(data.length);
+					
+					// DataTable vullen, itereren over elke rij
+					$.each(data, function(i, object) {
+						// De waardes toewijzen aan de respectievelijke kolommen per rij
+						dataTable.setValue(i, 0, object.Land);
+						dataTable.setValue(i, 1, object.Jaar_1999);
+                        dataTable.setValue(i, 2, object.Jaar_2000);
+						dataTable.setValue(i, 3, object.Jaar_2001);
+                        dataTable.setValue(i, 4, object.Jaar_2002);
+                        dataTable.setValue(i, 5, object.Jaar_2003);
+                        dataTable.setValue(i, 6, object.Jaar_2004);
+                        dataTable.setValue(i, 7, object.Jaar_2005);
+                        dataTable.setValue(i, 8, object.Jaar_2006);
+                        dataTable.setValue(i, 9, object.Jaar_2007);
+                        dataTable.setValue(i, 10, object.Jaar_2008);
+                        dataTable.setValue(i, 11, object.Jaar_2009);
+                        dataTable.setValue(i, 12, object.Jaar_2010);
+                        dataTable.setValue(i, 13, object.Jaar_2011);
+					});
+					// Opties voor de visualisatie definieren
+					var options = {
+						backgroundColor : '#f3f5d4',
+						colors : ['#8bbe24'],
+						fontSize : 10,
+						width : 750,
+						height : 1400
+					};
+					// Uitvoeren van de visualisatie
+					var chart = new google.visualization.BarChart(document.getElementById('visualization'));
+					chart.draw(dataTable, options);
+
+				});
+			});
+
+		</script>
+	</head>
+	<body>
+		<div id="visualization" style="width: 600px; height: 800px;"></div>
+	</body>
+</html>

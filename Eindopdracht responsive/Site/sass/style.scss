@@ -1,0 +1,426 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:200,400,500,700);
+$font-main: 'Roboto', sans-serif;
+$phone: 400px;
+$tablet: 640px;
+$window: 1024px;
+$primary-purple: #6e0072;
+
+body{
+    background-color: aqua;
+    
+    @media screen and (max-width: $window){
+        background-color: darkgreen;
+    }
+    
+    @media screen and (max-width: $phone){
+        background-color: brown;
+    }
+    
+    @media screen and (max-width: $tablet){
+        background-color: brown;
+    }
+    
+}
+
+.txtassort{
+    font-family: $font-main;
+    font-weight: 500;
+    font-size: 2em;
+    color: $primary-purple;
+    text-align: center;
+    bottom: 60px;
+    position: relative;
+    
+       @media screen and (max-width: $window){
+        margin-top: -100px;
+        width: 100%;
+        height: 100px; 
+    }
+    
+    @media screen and (max-width: $phone){
+        font-size: 1em;
+        bottom: -80px;
+    }
+    
+    @media screen and (max-width: $tablet){
+      font-size: 1.5em;
+        bottom: 0px;
+    }
+}
+
+#nav{
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    position: fixed;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.23);
+    box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.23);
+    
+     @media screen and (max-width: $window){
+        margin-top: -100px;
+        width: 100%;
+        height: 100px; 
+    }
+    
+    @media screen and (max-width: $phone){
+        margin-top: -50px;
+        width: 100%;
+        height: 50px;
+    }
+    
+    @media screen and (max-width: $tablet){
+        margin-top: -75px; 
+        width: 100%;
+        height: 75px;
+    }
+    
+    ul{
+        margin-left: 30px;
+        height: 100px;
+        float: left;
+        position: relative;
+    }
+    
+    li{
+        display: inline-block;
+        padding-top: 42px;
+        padding-left: 15px;
+        font-size: 1em;
+        
+        @media screen and (max-width: $window){
+           display: none;
+        }
+    
+        @media screen and (max-width: $phone){
+            display: none;
+        }
+    
+        @media screen and (max-width: $tablet){
+          display: none;
+        }
+        
+    }
+    
+    a{
+        color: $primary-purple;
+        text-decoration: none;
+        font-family: $font-main;
+        font-weight: 500;
+    }
+}
+
+.left{
+
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+
+.right{
+    width: 49%;
+    float: right;
+    height: 60%;
+    border-left: 1px solid #FFF;
+    top: 50%;
+  transform: translateY(30%);
+}
+
+#art1{
+   z-index: 1;
+    position: relative;
+    width: 45%;
+    height: auto;
+    top: 55px;
+    float: right;
+}
+
+.txt{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    width: 77%;
+    position: relative;
+    left: 26px;
+    font-weight: 200;
+    font-size: 0.9em;
+    top: 62px;
+    text-align: left;
+}
+
+.headtxt{
+      position: relative;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    font-weight: 500;
+    text-align: left;
+    font-size: 1.5em;
+    left: 25px;
+    top: 50px;
+    
+    
+}
+
+.meerinfo{
+    width: 80%;
+    top: 90px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.size{
+    width: 100%;
+}
+#navpos{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    
+      @media screen and (max-width: $window){
+        margin: 0 auto;
+        position: relative;
+        max-width: none;
+        width: 95%;
+    }
+    
+    @media screen and (max-width: $phone){
+         margin: 0 auto;
+        position: relative;
+        width: 95%;
+    }
+    
+    @media screen and (max-width: $tablet){
+      margin: 0 auto;
+        position: relative;
+        width: 95%;
+     
+    }
+}
+
+.logo{
+    width: 150px;
+    position: relative;
+    float: left;
+    padding: 1.3em;
+    
+        @media screen and (max-width: $window){
+            width: 135px;
+            position: relative;
+            float: right;
+            padding: 1.3em;
+        }
+    
+        @media screen and (max-width: $phone){
+            width: 32%;
+            position: relative;
+            float: right;
+            padding: 1em;
+        }
+    
+        @media screen and (max-width: $tablet){
+            width: 100px;
+            position: relative;
+            float: right;
+            padding: 1.1em;
+
+        }
+    
+}
+
+.pos{
+    width: 100%;
+    position: relative;
+    
+        @media screen and (max-width: $window){
+           width: 100%;
+            position: relative;
+        }
+    
+        @media screen and (max-width: $phone){
+           width: 100%;
+           position: relative;
+        }
+    
+        @media screen and (max-width: $tablet){
+           width: 100%;
+           position: relative;
+
+        }
+}
+
+.burgermenu{
+   display: none;
+    
+       @media screen and (max-width: $window){
+           display: block;
+            width: 50px;
+            height: 30px;
+            padding: 35px;
+            float: left;
+        }
+    
+        @media screen and (max-width: $phone){
+               display: block;
+                width: 44px;
+                height: 23px;
+                padding: 26px;
+                float: left;
+        }
+    
+        @media screen and (max-width: $tablet){
+               display: block;
+                width: 44px;
+                height: 23px;
+                padding: 26px;
+                float: left;
+        }
+}
+
+.menupos{
+    width: 50px;
+    height: 30px;
+    
+    @media screen and (max-width: $window){
+           width: 50px;
+           height: 30px;
+        }
+    
+        @media screen and (max-width: $phone){
+           width: 43px;
+           height: 21px;
+        }
+    
+        @media screen and (max-width: $tablet){
+            width: 43px;
+            height: 21px;
+        }
+}
+
+article{
+    width: 100%;
+    height: 2125px;
+    position: relative;
+}
+
+#slideshow{
+    
+   @media screen and (max-width: $window){
+               position: relative;
+               margin-top: 100px;
+               width: 100%;
+               height: auto;
+        }
+    
+        @media screen and (max-width: $phone){
+               position: relative;
+               margin-top: 75px;
+               width: 100%;
+               height: auto;
+        }
+    
+        @media screen and (max-width: $tablet){
+                position: relative;
+                margin-top: 75px;
+                width: 100%;
+                height: auto;
+        }
+}
+
+#margin{
+    margin-top: -3px;
+    width: 100%;
+    height: 100%;
+}
+
+.slideshowpos{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+#add1{
+    width: 100%;
+    height: 20%;
+}
+
+#add2{
+    position: relative;
+    width: 100%;
+    height: 20%;
+}
+
+#add3{
+    position: relative;
+    width: 100%;
+    height: 20%;
+}
+
+#add4{
+    position: relative;
+    width: 100%;
+    height: 20%;
+}
+
+#add5{
+    position: relative;
+    width: 100%;
+    height: 20%;
+}
+
+.fill1{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.fill2{
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/purple_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bgpurple{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.bgfooter{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: #d9d9d9;
+}
+
+.assortimentpos{
+
+     @media screen and (max-width: $window){
+               position: relative;
+               width: 100%;
+               height: auto;
+        }
+    
+        @media screen and (max-width: $phone){
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding-top: 80px;
+                padding-bottom: 80px;
+        }
+    
+        @media screen and (max-width: $tablet){
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding-top: 80px;
+                padding-bottom: 80px;
+        }
+}

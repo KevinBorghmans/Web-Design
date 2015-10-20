@@ -1,0 +1,455 @@
+body{
+
+    background-color: black;   
+}
+
+#background{
+    position: absolute;
+    margin-right: 50px;
+}
+
+.bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+nav{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+}
+
+.navbg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    display: block;
+    margin: 0;
+    width: 100%;
+    min-width: 1024px;
+    height: 48px;
+    max-height: 44px;
+    background-color: #2a2a2a;
+    display: inline-block;
+}
+
+ul li{
+    display: inline-block;
+    position: relative;
+    height: 44px;
+    z-index: 9999;
+    vertical-align: top;
+    margin: 0 10px 0;
+    
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", sans-serif; 
+   font-weight: 300;
+    font-size: 1em;font-weight: inherit;
+    line-height: inherit;
+    text-align: inherit;
+}
+
+
+.mac{
+     background-repeat: no-repeat;
+    background-size: 31px 44px;
+    background-image: url("http://www.apple.com/ac/globalnav/2.0/en_US/images/ac-globalnav/globalnav/links/mac/image_large.svg");
+    background-position: center center;
+    width: 31px;
+    margin: 0 30px;
+    cursor: pointer;
+     transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.mac:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.ipad{
+ background-repeat: no-repeat;
+    background-size: 30px 44px;
+    background-image: url("http://www.apple.com/ac/globalnav/2.0/en_US/images/ac-globalnav/globalnav/links/ipad/image_large.svg");
+    background-position: center center;
+    width: 30px;
+    margin: 0 30px;
+    cursor: pointer;
+     transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.ipad:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.iphone{
+ background-repeat: no-repeat;
+    background-size: 48px 44px;
+    background-image: url("http://www.apple.com/ac/globalnav/2.0/en_US/images/ac-globalnav/globalnav/links/iphone/image_large.svg");
+    background-position: center center;
+    width: 48px;
+    margin: 0 30px;
+    cursor: pointer;
+     transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.iphone:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.watch{
+ background-repeat: no-repeat;
+    background-size: 44px 44px;
+    background-image: url("http://www.apple.com/ac/globalnav/2.0/en_US/images/ac-globalnav/globalnav/links/watch/image_large.svg");
+    background-position: center center;
+    width: 44px;
+    margin: 0 30px;
+    cursor: pointer;
+     transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.watch:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.tv{
+ background-repeat: no-repeat;
+    background-size: 20px 44px;
+    background-image: url("http://www.apple.com/ac/globalnav/2.0/en_US/images/ac-globalnav/globalnav/links/tv/image_large.svg");
+    background-position: center center;
+    width: 20px;
+    margin: 0 30px;
+    cursor: pointer;
+     transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.tv:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.music{
+    background-repeat: no-repeat;
+    background-size: 40px 44px;
+    background-image: url("http://www.apple.com/ac/globalnav/2.0/en_US/images/ac-globalnav/globalnav/links/music/image_large.svg");
+    background-position: center center;
+    width: 40px;
+    margin: 0 30px;
+    cursor: pointer;
+     transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.music:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.support{
+    background-repeat: no-repeat;
+    background-size: 57px 44px;
+    background-image: url("http://www.apple.com/ac/globalnav/2.0/en_US/images/ac-globalnav/globalnav/links/support/image_large.svg");
+    background-position: center center;
+    width: 57px;
+    margin: 0 30px;
+    cursor: pointer;
+     transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.support:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.search{
+    background-repeat: no-repeat;
+    background-size: 20px 44px;
+    background-image: url("http://www.apple.com/ac/globalnav/2.0/en_US/images/ac-globalnav/globalnav/search/image_large.svg");
+    background-position: center center;
+    width: 20px;
+    margin: 0 30px;
+    cursor: pointer;
+     transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.search:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.bag{
+    background-repeat: no-repeat;
+    background-size: 20px 44px;
+    background-image: url("http://www.apple.com/ac/globalnav/2.0/en_US/images/ac-globalnav/globalnav/bag/image_large.svg");
+    background-position: center center;
+    width: 20px;
+    cursor: pointer;
+     transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.bag:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.apple{
+    background-repeat: no-repeat;
+    background-size: 20px 44px;
+    background-image: url("http://www.apple.com/ac/globalnav/2.0/en_US/images/ac-globalnav/globalnav/apple/image_large.svg");
+    background-position: center center;
+    width: 20px;
+    cursor: pointer;
+    transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.apple:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#navpos{
+    max-width: 930px;
+    margin: 0 auto 0;
+    padding: 0 22px;
+    position: relative;
+    text-align: justify;
+}
+
+.intro{
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    width: 3000px;
+    margin: 0 -1500px;
+    z-index: -1;
+}
+
+video{
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    z-index: -1;
+    margin-top: 100px;
+}
+
+#productnav{
+    width: 100%;
+    position: absolute;
+    top: 44px;
+    height: 78px;
+    z-index: 66;
+    background-color:rgba(0,0,0,0.5);
+}
+
+#nav-clip{
+    width: 100%;
+    max-width: 868px;
+    height: 40px;
+    margin: 0 548px;
+    margin-top: 37px;
+    border-bottom: 1px solid #363532;
+}
+
+.productname{
+    width: 104px;
+    height: 25px;
+    padding: 0 0 16px 0;
+    float: left;
+}
+
+header{
+    top: 0px;
+}
+
+.overview{
+    text-decoration: none;
+    color: white;
+     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", sans-serif; 
+   font-weight: 300;
+    font-size: 0.75em;
+    font-weight: inherit;
+    line-height: inherit;
+    text-align: inherit;
+    transition: opacity .25s ease-in-out;
+     -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.overview:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.performance{
+    text-decoration: none;
+    color: white;
+     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", sans-serif; 
+   font-weight: 300;
+    font-size: 0.75em;font-weight: inherit;
+    line-height: inherit;
+    text-align: inherit;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.performance:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.specs{
+    text-decoration: none;
+    color: white;
+     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", sans-serif; 
+   font-weight: 300;
+    font-size: 0.75em;font-weight: inherit;
+    line-height: inherit;
+    text-align: inherit;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.specs:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+li{
+    list-style-type: none;
+}
+
+#destination{
+    float: right;
+    padding: 0 0 16px 0;
+    display: inline-block;
+}
+
+.despos{
+    display: inline-block;
+    height: 20px;
+    margin-top: 14px;
+    float: right;
+}
+
+.buy{
+    background-image: url(/images/buynow_1.png); 
+    background-size: 60px 18px;
+}
+
+.buy:hover{
+    background-image: url(/images/buynow_2.png);
+    background-size: 60px 18px;
+}
+
+ul li overview{
+    padding: 0;
+}
+
+#placeholdervid{
+    width: 960px;
+    margin: 0 auto 0;
+    position: relative;
+    top: 170px;
+}
+
+#placehouldermac{
+    text-align: center;
+}
+
+.macpro{
+    margin: 0 auto 0;
+    height: 60px;
+}
+
+.built{
+    margin: 0 auto 0;
+    height: 45px;
+}
+
+#placehoulderbuilt{
+    text-align: center;
+}
+
+#textboxunder{
+    margin: 0 auto 0;
+    width: 100%;
+    text-align: center;
+    bottom: 160px;
+    position: absolute;
+}
+
+.somethimes{
+    width: 960px;  
+}
+
+.introtext{
+  text-decoration: none;
+    color: #b3b3b3;
+     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", sans-serif; 
+   font-weight: 300;
+    font-size: 1.2em;
+    font-weight: inherit;
+    line-height: 22px;
+    text-align: inherit; 
+    width: 780px;
+    margin: 0 auto 0;    
+}
+
+#power{
+    margin: 0 auto 0;
+    width: 100%;
+    text-align: center;
+    bottom: 50px;
+    position: absolute;
+}
+
+.powerclass{
+    height: 66px;
+    width: auto;
+}
+
+.powertext{
+text-decoration: none;
+    color: #b3b3b3;
+     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", sans-serif; 
+   font-weight: 300;
+    font-size: 1.2em;
+    font-weight: inherit;
+    line-height: 22px;
+    text-align: inherit; 
+    width: 680px;
+    margin: 0 auto 0; 
+}

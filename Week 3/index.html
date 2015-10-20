@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Canvas Scroll</title>
+           <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+            <script src="headerscroll.js"></script>
+            
+            <script>
+                $(document).ready(function(){
+                $("header").hide().delay(3000).fadeIn(2000),
+                $("#placehouldermac").hide(0).delay(2000).fadeIn(1500).stop,
+                $("#placehoulderbuilt").hide(0).delay(2500).fadeIn(1500).stop,
+                $("#textboxunder").hide(),
+                $("#power").hide()
+                });
+            </script>
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    </head>
+
+<header>
+    <nav>
+        <ul class="navbg">
+          <section id="navpos">
+               <li class="apple">
+                   <a class="link-apple" href="#">
+                        <span class="text-apple"></span>
+                    </a>  
+               </li>
+                <li class="mac">
+                    <a class="link-mac" href="#">
+                        <span class="text-mac"></span>
+                    </a>
+                </li>
+                <li class="ipad">
+                    <a class="link-ipad" href="#">
+                        <span class="text-mac"></span>
+                    </a>
+                </li>
+                <li class="iphone">
+                    <a class="link-iphone" href="#">
+                        <span class="text-mac"></span>
+                    </a>
+                </li>
+                <li class="watch">
+                    <a class="link-watch" href="#">
+                        <span class="text-mac"></span>
+                    </a>
+                </li>
+                <li class="tv">
+                    <a class="link-tv" href="#">
+                        <span class="text-mac"></span>
+                    </a>
+                </li>
+                <li class="music">
+                    <a class="link-music" href="#">
+                        <span class="text-mac"></span>
+                    </a>
+                </li>
+                <li class="support">
+                    <a class="link-support" href="#">
+                        <span class="text-mac"></span>
+                    </a>
+                </li>
+                <li class="search">
+                    <a class="link-search" href="#">
+                        <span class="text-mac"></span>
+                    </a>
+                </li>
+                <li class="bag">
+                    <a class="link-bag" href="#">
+                        <span class="text-mac"></span>
+                    </a>
+                </li>
+            </div>
+        </ul>
+    </nav> 
+       
+        <section id="productnav">
+            <section id="nav-clip">
+
+                <section id="product-name">
+                      <ul class="despos">
+                        <li class="overview"><a href="#">Overview</a></li>
+                        <li class="performance"><a href="#">Performance</a></li>
+                        <li class="specs"><a href="#">Specs</a></li>
+                        <li ><a class="buy" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a></li>
+                    </ul>
+                    <a href="#"><img class="productname" src="http://images.apple.com/v/mac-pro/b/images/productheader_productname_2x.png"/></a>
+                </section>
+            </section>
+        </section>
+</header>
+
+
+        
+
+<canvas id="background" width="1270" height="720"></canvas>
+<section class="intro"><video autoplay src="http://movies.apple.com/media/us/mac-pro/2013/16C1b6b5-1d91-4fef-891e-ff2fc1c1bb58/videos/macpro_intro_desktop.mp4"></video></section>
+
+
+<section id="placeholdervid">
+    <div id="placehouldermac">
+        <img class="macpro" src="http://images.apple.com/mac-pro/images/hero_title_2x.png"/>
+    </div>
+    
+    <div id="placehoulderbuilt">
+       <img class="built" src=" http://images.apple.com/mac-pro/images/hero_subtitle_2x.png"/>
+    </div>
+</section>
+
+<article id="textboxunder">
+    <img class="somethimes" src="http://images.apple.com/mac-pro/images/change_title_2x.png" alt="somthimes"/>
+    <p class="introtext">When we began work on the new Mac Pro, we considered every element that defines a pro computer graphics, storage, expansion, processing power, and memory. And we challenged ourselves to find the best, most forward-looking way possible to engineer each one of them. When we put it all together, the result was something entirely new. Something radically different from anything before it. Something that provides an extremely powerful argument against the status quo.</p>
+</article>
+
+<article id="power">
+    <img class="powerclass" src="http://images.apple.com/mac-pro/images/power_title_2x.png" alt="power"/>
+    <p class="powertext">Engineered around workstation graphics with dual GPUs, PCIe-based flash storage, high-performance Thunderbolt 2, new-generation Xeon processors, ultrafast memory, and support for 4K video, the new Mac Pro delivers state-of-the-art performance across the board.</p>
+</article>
+
+<script type="text/javascript">
+    
+var totalImages = 391;
+var images = new Array();
+for(var i = 3; i < totalImages + 3; i++) {
+	var filename = 'macpro_main_desktop_converted';
+	if(i < 10) filename += '000';
+	else if(i < 100) filename += '00';
+    else if(i < 1000) filename += '0';
+	filename += i + '.jpg';
+	var img = new Image;
+	img.src = 'images/' + filename;
+	images.push(img);
+}
+    console.log(Image);
+
+var canv = document.getElementById('background');
+var context = canv.getContext('2d');
+$(canv)
+	.width($(window).width())
+	.height($(window).height());
+
+var currentLocation = 0;
+    
+
+window.addEventListener('mousewheel', function(e) {
+	e.preventDefault();
+	console.log(currentLocation);
+    
+    if(currentLocation >= 13){
+         $("#placehouldermac").fadeOut(500),
+         $("#placehoulderbuilt").fadeOut(500)
+        }else if(currentLocation<=13){
+            $("#placehouldermac").fadeIn(500),
+            $("#placehoulderbuilt").fadeIn(500)
+        }
+    
+    if(currentLocation == 30 || currentLocation == 74){
+            $("#textboxunder").fadeIn(500)
+        }else if(currentLocation <= 30 || currentLocation >= 75){
+            $("#textboxunder").fadeOut(500)
+        }
+    
+    if(currentLocation == 78 || currentLocation == 178){
+            $("#power").fadeIn(500)
+    }else if(currentLocation <= 78 || currentLocation >= 180){
+            $("#power").fadeOut(500)
+        }
+    
+    
+	var delta = Math.max(-1, Math.min(1, e.wheelDelta));
+	if(delta == -1) currentLocation += 1;
+	if(delta == 1) currentLocation -= 1;
+	if(currentLocation < 0) currentLocation = 0;
+	if(currentLocation > images.length) currentLocation = images.length;
+	setImage(currentLocation);
+});
+
+function setImage(newLocation) {
+	context.drawImage(images[newLocation], 0, 50, 1280, 720);
+}
+    
+    
+</script>
+
+</html>
