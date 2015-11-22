@@ -1,0 +1,35 @@
+html {
+    overflow-y: scroll;
+}
+
+/*
+Setup a basic body
+*/
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial;
+    font-size: 18px;
+}
+
+/*
+Header is relative so z-index: 1 guarantees always displayed on top
+*/
+
+
+/*
+using background color is important to cover the menu
+position absolute isset to cover the whole viewport
+*/ @media screen and (max-width: 1024px){
+#content {
+    background-color: #FFFFFF;
+    padding: 52px 10px 10px 10px;
+    position: relative;
+    width: auto;
+    height: 100%;
+    -webkit-box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
+}
+
+ }

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodas-Copy</title>
+    <link rel="stylesheet" type="text/css" href="../Css/style.css">
+    <link rel="stylesheet" type="text/css" href="../Css/cssreset.css">
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    
+    
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+    <!--Using the hamburger menu display code-->
+    <script src="../js/hamburger.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <nav class="nav-main">
+                <ul class="ul-main">
+                    <li class="li-main"><a class="color-main-nav" href="#">Print</a></li>
+                    <li class="li-main"><a class="color-main-nav" href="#">Office</a></li>
+<!--                    <li class="li-main"><a class="color-main-nav" href="#">Afwerking</a></li>-->
+                    <li class="li-main"><a class="color-main-nav" href="school.html">School</a></li>
+<!--
+                    <li class="li-main"><a class="color-main-nav" href="#">About</a></li>
+                    <li class="li-main"><a class="color-main-nav" href="#">Contact</a></li>
+-->
+                </ul>
+            </nav>
+            <div class="grid">
+                <div class="logo"><a href="../index.html"><img class="logo-size" alt="logo" src="../images/logo.png" /></a></div>
+                <div id="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </header>
+
+        <nav id="burger">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Print</a></li>
+                <li><a href="#">Office</a></li>
+<!--                <li><a href="#">Afwerking</a></li>-->
+                <li><a href="school.html">School</a></li>
+<!--
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+-->
+            </ul>
+        </nav>
+
+        <div id="contentLayer"></div>
+
+        <!--The content of the site-->
+        <div id="content">
+           
+           <div class="gallery">
+             <img class="img-gallery" src="../images/office-img.png" alt="print"/>
+              <img class="img-mobile"  src="../images/office-page.png" alt="gallery"/> 
+              <img class="img-desktop" src="../images/office-page.png" alt="gallery"/>
+           </div>
+           
+           
+           
+           <section class="office-art">
+               <div class="office-section-art">
+                    <div class="img-left">
+                       <img class="resize" src="../images/papier.png" alt="paper"/>
+                    </div>
+                    <div class="txt-right">
+                        <h1 class="art-header">Papier</h1>
+                            <p class="art-txt2">Heeft u speciafiek papier nodig? We hebben allerei verschillende soorten en maten papier voor uw printers op kantoor!</p>
+                    </div>
+               </div>
+               
+                <div class="office-section-art">
+                    <div class="img-left">
+                       <img class="resize" src="../images/pennen.png" alt="paper"/>
+                    </div>
+                    <div class="txt-right">
+                        <h1 class="art-header">Schrijfmateriaal</h1>
+                            <p class="art-txt2">Bent u het ook beu dat niemand een pen bij heeft? Of de duren pennen van het kantoor mee naar huis neemt en altijd vergeet? Wij hebben een grote range van wegwerp pennen voor u op het kantoor.</p>
+                    </div>
+               </div>
+               
+                <div class="office-section-art">
+                    <div class="img-left">
+                       <img class="resize" src="../images/luxe_schrijfgerei.png" alt="paper"/>
+                    </div>
+                    <div class="txt-right">
+                        <h1 class="art-header">Luxe Schrijfgerei</h1>
+                            <p class="art-txt2">Wilt u zichzelf of uw medewerkers verwennen met een caduea? Koop dat luxe schrijfwaar. Een leuk gebaar. Er kan ook een speciale boodschap of naam op de pennen gegraveerd worden.</p>
+                    </div>
+               </div>
+               
+                <div class="office-section-art">
+                    <div class="img-left">
+                       <img class="resize" src="../images/post.png" alt="paper"/>
+                    </div>
+                    <div class="txt-right">
+                        <h1 class="art-header">Pakket Service</h1>
+                            <p class="art-txt2">Bent u het beu dat er altijd problemen zijn met uw pakketen of heeft u geen makkelijke manier om pakketen te versturen? Wij hebben een speciale pakket Service voor uw kantoor neem contact met ons op!</p>
+                    </div>
+               </div>
+           </section>
+        
+           
+                           <!--
+================================================
+   
+                Mobile        
+                           
+================================================                                                       
+-->
+            
+
+
+            <footer>
+              
+              <section class="social">
+                  <h1 class="social-txt">Social Media</h1>
+                  <a href="https://www.facebook.com/RodasCopyOffice"><img class="facebook" src="../images/facbook.png" alt="facebook"/></a>
+              </section>
+              
+              <section class="contact">
+                 <form class="contact-form">
+                    <label id="name">Contact ons</label><br><br>
+                    <label id="firstname">Firstname*</label><label id="lastname">Lastname*</label><br>
+                     <input id="name-size" type="text" name="firstname">
+                     
+                     
+                     <input class="lastname-space" type="text" name="lastname"><br></br>
+                     
+                     <label id="email">Email*</label><br>
+                     <input id="scale-email" type="e-mail" name="email"><br><br>
+                     
+                     <label id="comment">Comment*</label>
+                     <textarea id="comment-size" rows="8" cols="50" name="comment"></textarea>
+                     
+                 </form> 
+              </section>
+              
+               <iframe id="googleMap" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJr6SZwjcfxEcR6XcsOGvcQ0o&key=AIzaSyAFHrwfWHaoDw9rFf2ArKuJ9-T5Z3JW0mE" allowfullscreen></iframe>
+                <img class="bgfooter" src="../images/footer.png" alt="footer" />
+               
+            </footer>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
